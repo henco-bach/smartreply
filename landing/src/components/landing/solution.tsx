@@ -27,28 +27,33 @@ const features = [
 export function SolutionSection() {
   return (
     <section id="features" className="relative scroll-mt-28 overflow-hidden px-6 py-20 sm:px-10 lg:px-14">
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(37,211,102,0.15),rgba(255,255,255,0)_42%)]"
-        aria-hidden
-      />
-      <div className="mx-auto max-w-6xl rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-soft sm:p-12">
-        <SectionHeading
-          eyebrow="The Solution"
-          title="SmartReply Handles It Automatically"
-          description="Automate first-touch response without sacrificing quality, clarity, or brand voice."
-          align="center"
-        />
+      <div className="mx-auto max-w-6xl">
+        <div className="relative">
+          <div
+            className="pointer-events-none absolute -inset-10 -z-10 rounded-[2.8rem] bg-[radial-gradient(ellipse_at_top_left,rgba(37,211,102,0.17)_0%,rgba(37,211,102,0.08)_38%,rgba(255,255,255,0)_76%)] blur-xl"
+            aria-hidden
+          />
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
-          {features.map(({ title, text, Icon }) => (
-            <article key={title} className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-brand/30 hover:bg-white">
-              <div className="mb-4 inline-flex rounded-xl bg-white p-2.5 text-brand-dark shadow-soft">
-                <Icon className="h-5 w-5" />
-              </div>
-              <h3 className="text-base font-semibold text-slate-900 sm:text-lg">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">{text}</p>
-            </article>
-          ))}
+          <div className="relative rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-soft sm:p-12">
+            <SectionHeading
+              eyebrow="The Solution"
+              title="SmartReply Handles It Automatically"
+              description="Automate first-touch response without sacrificing quality, clarity, or brand voice."
+              align="center"
+            />
+
+            <div className="mt-10 grid gap-5 sm:grid-cols-2">
+              {features.map(({ title, text, Icon }) => (
+                <article key={title} className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-brand/30 hover:bg-white">
+                  <div className="mb-4 inline-flex rounded-xl bg-white p-2.5 text-brand-dark shadow-soft">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="text-base font-semibold text-slate-900 sm:text-lg">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
