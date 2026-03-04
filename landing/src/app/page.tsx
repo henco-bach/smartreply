@@ -12,7 +12,7 @@ export default function Home() {
     <div className="relative isolate bg-white">
       <div className="absolute inset-0 -z-10">
         <div className="grid-fade absolute inset-0 opacity-40" />
-        <div className="absolute left-1/2 top-0 h-[460px] w-[760px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(37,211,102,0.18),rgba(255,255,255,0)_65%)]" />
+        <div className="absolute left-1/2 top-0 h-[760px] w-[1120px] -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,rgba(37,211,102,0.16)_0%,rgba(37,211,102,0.08)_34%,rgba(255,255,255,0)_78%)]" />
       </div>
 
       <Header />

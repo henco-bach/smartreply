@@ -21,7 +21,7 @@ export function HeroSection() {
   return (
     <section id="home" className="relative scroll-mt-28 overflow-hidden pt-4 sm:pt-10">
       <div
-        className="pointer-events-none absolute inset-x-0 -top-40 h-[520px] bg-[radial-gradient(circle_at_top,rgba(37,211,102,0.24),rgba(255,255,255,0))]"
+        className="pointer-events-none absolute inset-x-0 -top-56 h-[860px] bg-[radial-gradient(80%_60%_at_50%_0%,rgba(37,211,102,0.22)_0%,rgba(37,211,102,0.12)_36%,rgba(255,255,255,0)_78%)]"
         aria-hidden
       />
       <div className="mx-auto grid max-w-6xl gap-14 px-6 pb-20 pt-12 sm:px-10 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:px-14">
