@@ -1,0 +1,23 @@
+{
+  "name": "smartreply-mvp",
+  "version": "1.0.0",
+  "description": "SmartReply MVP SaaS: SMS auto-replies powered by OpenAI",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "landing:dev": "npm --prefix landing run dev",
+    "landing:build": "npm --prefix landing run build",
+    "landing:start": "npm --prefix landing run start"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "openai": "^4.0.0",
+    "twilio": "^5.0.0"
+  }
+}

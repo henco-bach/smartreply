@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartReply Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <main class="container">
+      <header class="hero">
+        <p class="eyebrow">SmartReply MVP</p>
+        <h1>SMS AI Auto-Reply</h1>
+        <p class="subtext">
+          Twilio webhook receives a message, OpenAI generates a reply, and SmartReply sends it back.
+        </p>
+      </header>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Service Status</h2>
+          <div id="health" class="mono loading">Loading...</div>
+          <p class="muted" id="webhookHint"></p>
+        </article>
+
+        <article class="card">
+          <h2>Environment Check</h2>
+          <ul id="configList" class="mono"></ul>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Send Manual SMS</h2>
+        <form id="manualForm" class="form">
+          <label>
+            To (example: +15551234567)
+            <input name="to" type="text" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="3" required></textarea>
+          </label>
+          <button type="submit">Send Message</button>
+        </form>
+        <p id="manualResult" class="mono muted"></p>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <h2>Recent Conversations</h2>
+          <button id="refreshBtn" type="button">Refresh</button>
+        </div>
+        <div id="messages" class="messages"></div>
+      </section>
+
+      <section class="card tip">
+        <h2>Twilio Setup</h2>
+        <ol>
+          <li>In Twilio Console, open your SMS-enabled phone number settings.</li>
+          <li>Set incoming webhook to <code id="webhookUrl"></code></li>
+          <li>Use HTTP <code>POST</code>.</li>
+        </ol>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
